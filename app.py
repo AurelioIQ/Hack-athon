@@ -13,9 +13,9 @@ def index():
     return render_template('index.html')
 
 #iniciarSesion
-@app.route('/iniciarUsuario', methods=['GET', 'POST'])
-def iniciarusuario():
-    return render_template('iniciarUsuario.html')
+@app.route('/iniciarSesion', methods=['GET', 'POST'])
+def iniciarSesion():
+    return render_template('iniciarSesion.html')
 
 #administrador
 @app.route('/administrador', methods=['GET', 'POST'])
