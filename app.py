@@ -12,9 +12,10 @@ app.secret_key ='ajsuhdesdsd'
 def index():
     return render_template('index.html')
 
-@app.route('/index1', methods=['GET', 'POST'])
-def index1():
-    return render_template('index1.html')
+#iniciarSesion
+@app.route('/iniciarSesion', methods=['GET', 'POST'])
+def iniciarSesion():
+    return render_template('iniciarSesion.html')
 
 #administrador
 @app.route('/administrador', methods=['GET', 'POST'])
@@ -23,6 +24,10 @@ def administrador():
 
 #registrar
 @app.route('/registrarUsuario', methods=['GET', 'POST'])
+def registrarU():
+    return render_template('registrarU.html')
+
+@app.route('/administrador/registrarUsuario', methods=['GET', 'POST'])
 def registrarUsuario():
     return render_template('registrarUsuario.html')
 
@@ -85,10 +90,6 @@ def buscarLote():
 @app.route('/buscarProducto', methods=['GET', 'POST'])
 def buscarProducto():
     return render_template('buscarProducto.html')
-
-"""@app.route('/detalles', methods=['GET', 'POST'])
-def detalles():
-    return render_template('detalles.hmtl')"""
 
 #Errores
 @app.route('/error401', methods=['GET', 'POST'])
