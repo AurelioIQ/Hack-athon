@@ -12,9 +12,10 @@ app.secret_key ='ajsuhdesdsd'
 def index():
     return render_template('index.html')
 
-@app.route('/index1', methods=['GET', 'POST'])
-def index1():
-    return render_template('index1.html')
+#iniciarSesion
+@app.route('/iniciarUsuario', methods=['GET', 'POST'])
+def iniciarusuario():
+    return render_template('iniciarUsuario.html')
 
 #administrador
 @app.route('/administrador', methods=['GET', 'POST'])
@@ -23,6 +24,10 @@ def administrador():
 
 #registrar
 @app.route('/registrarUsuario', methods=['GET', 'POST'])
+def registrarU():
+    return render_template('registrarU.html')
+
+@app.route('/administrador/registrarUsuario', methods=['GET', 'POST'])
 def registrarUsuario():
     return render_template('registrarUsuario.html')
 
