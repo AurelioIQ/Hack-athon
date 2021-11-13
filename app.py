@@ -22,10 +22,6 @@ def administrador():
     return render_template('administrador.html')
 
 #registrar
-@app.route('/registrarU', methods=['GET', 'POST'])
-def registrarU():
-    return render_template('registrarU.html')
-
 @app.route('/registrarUsuario', methods=['GET', 'POST'])
 def registrarUsuario():
     return render_template('registrarUsuario.html')
