@@ -86,10 +86,6 @@ def buscarLote():
 def buscarProducto():
     return render_template('buscarProducto.html')
 
-@app.route('/detalles')
-def detalles():
-    return render_template('detalles.hmtl')
-
 #Errores
 @app.route('/error401')
 def error401():
