@@ -8,96 +8,99 @@ app = Flask(__name__)
 app.secret_key ='ajsuhdesdsd'
 
 #index
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/index1', methods=['GET', 'POST'])
+@app.route('/index1')
 def index1():
     return render_template('index1.html')
 
 #administrador
-@app.route('/administrador', methods=['GET', 'POST'])
+@app.route('/administrador')
 def administrador():
     return render_template('administrador.html')
 
 #registrar
-@app.route('/registrarUsuario', methods=['GET', 'POST'])
+@app.route('/registrarUsuario')
 def registrarUsuario():
     return render_template('registrarUsuario.html')
 
-@app.route('/registrarLote', methods=['GET', 'POST'])
+@app.route('/registrarLote')
 def registrarLote():
     return render_template('registrarLote.html')
 
-@app.route('/registrarProducto', methods=['GET', 'POST'])
+@app.route('/registrarProducto')
 def registrarProducto():
     return render_template('registrarProducto.html')
 
 #Gestionar
-@app.route('/gestionarUsuarios', methods=['GET', 'POST'])
+@app.route('/gestionarUsuarios')
 def gestionarUsuarios():
     return render_template('gestionarUsuarios.html')
 
-@app.route('/gestionarLotes', methods=['GET', 'POST'])
+@app.route('/gestionarLotes')
 def gestionarLotes():
     return render_template('gestionarLotes.html')
 
-@app.route('/registrarProductos', methods=['GET', 'POST'])
+@app.route('/registrarProductos')
 def gestionarProductos():
     return render_template('gestionarProductos.html')
 
 #Editar
-@app.route('/editarUsuario', methods=['GET', 'POST'])
+@app.route('/editarUsuario')
 def editarUsuario():
     return render_template('editarUsuario.html')
 
-@app.route('/editarLote', methods=['GET', 'POST'])
+@app.route('/editarLote')
 def editarLote():
     return render_template('editarLote.html')
 
-@app.route('/editarProducto', methods=['GET', 'POST'])
+@app.route('/editarProducto')
 def editarProducto():
     return render_template('editarProducto.html')
 
 #Eliminar
-@app.route('/eliminarUsuario', methods=['GET', 'POST'])
+@app.route('/eliminarUsuario')
 def eliminarUsuario():
     return render_template('eliminarUsuario.html')
 
-@app.route('/eliminarLote', methods=['GET', 'POST'])
+@app.route('/eliminarLote')
 def eliminarLote():
     return render_template('eliminarLote.html')
 
-@app.route('/eliminarProducto', methods=['GET', 'POST'])
+@app.route('/eliminarProducto')
 def eliminarProducto():
     return render_template('eliminarProducto.html')
 
 #Buscar
-@app.route('/buscarUsuario', methods=['GET', 'POST'])
+@app.route('/buscarUsuario')
 def buscarUsuario():
     return render_template('buscarUsuario.html')
 
-@app.route('/buscarLote', methods=['GET', 'POST'])
+@app.route('/buscarLote')
 def buscarLote():
     return render_template('buscarLote.html')
 
-@app.route('/buscarProducto', methods=['GET', 'POST'])
+@app.route('/buscarProducto')
 def buscarProducto():
     return render_template('buscarProducto.html')
 
+<<<<<<< HEAD
 """
 #detalles
 @app.route('/detalles', methods=['GET', 'POST'])
 def detalles():
     return render_template('detalles.hmtl')"""
 
+=======
+>>>>>>> bfbb39250f8abc3095cf9fb9f1f94f03a838eb7b
 #Errores
-@app.route('/error401', methods=['GET', 'POST'])
+@app.route('/error401')
 def error401():
     return render_template('401.html')
 
-@app.route('/error404', methods=['GET', 'POST'])
+@app.route('/error404')
 def error404():
     return render_template('404.html')
 
