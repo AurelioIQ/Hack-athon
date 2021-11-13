@@ -86,7 +86,9 @@ def buscarLote():
 def buscarProducto():
     return render_template('buscarProducto.html')
 
-"""@app.route('/detalles', methods=['GET', 'POST'])
+"""
+#detalles
+@app.route('/detalles', methods=['GET', 'POST'])
 def detalles():
     return render_template('detalles.hmtl')"""
 
