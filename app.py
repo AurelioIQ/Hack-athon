@@ -85,7 +85,7 @@ def buscarUsuario():
 
 @app.route('/buscarLote', methods=['GET', 'POST'])
 def buscarLote():
-    return render_template('buscarLote.html', methods=['GET', 'POST'])
+    return render_template('buscarLote.html')
 
 @app.route('/buscarProducto', methods=['GET', 'POST'])
 def buscarProducto():
