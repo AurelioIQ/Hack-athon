@@ -48,7 +48,7 @@ def gestionarUsuarios():
 def gestionarLotes():
     return render_template('gestionarLotes.html')
 
-@app.route('/registrarProductos', methods=['GET', 'POST'])
+@app.route('/gestionarProductos', methods=['GET', 'POST'])
 def gestionarProductos():
     return render_template('gestionarProductos.html')
 
