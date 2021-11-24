@@ -1,5 +1,8 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
+from models import *
 import hashlib
+
+from models import buscarproductos
 
 salt = 'x32as9dAnijnK7AOJND5ksSH3bAwnT'
 
@@ -48,7 +51,7 @@ def gestionarUsuarios():
 def gestionarLotes():
     return render_template('gestionarLotes.html')
 
-@app.route('/registrarProductos', methods=['GET', 'POST'])
+@app.route('/gestionarProductos', methods=['GET', 'POST'])
 def gestionarProductos():
     return render_template('gestionarProductos.html')
 
@@ -85,10 +88,18 @@ def buscarUsuario():
 
 @app.route('/buscarLote', methods=['GET', 'POST'])
 def buscarLote():
+    if request.method == "POST":
+        buscalote = request.form["busqueda"] #aqui se esta obteniendo la informacion de busqueda del usuario
+        buscalote = buscarproductos(buscalote)
+        return render_template('buscarLote.html', buscalote=buscalote)
     return render_template('buscarLote.html')
 
 @app.route('/buscarProducto', methods=['GET', 'POST'])
 def buscarProducto():
+    if request.method == "POST":
+        buscaproductos = request.form["busqueda"] #aqui se esta obteniendo la informacion de busqueda del usuario
+        producto = buscarproductos(buscaproductos)
+        return render_template('buscarProducto.html', producto=producto)
     return render_template('buscarProducto.html')
 
 #Errores
